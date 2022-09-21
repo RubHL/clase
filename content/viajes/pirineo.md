@@ -1,7 +1,7 @@
 ---
 title: "Pirineo"
 date: 2022-09-21T06:55:19+02:00
-draft: true
+draft: false
 ---
 # sdad
 
