@@ -15,10 +15,13 @@ author:
 
 menu:
   main: 
-
+    - identifier: blogs
+      name: blogs
+      url: /blogs
+      weight: 40 
     - identifier: viajes
-      name: viajes
-      url: /viajes/pirineo 
+      name: viajessss
+      url: /viajes
       weight: 40 
     - identifier: curriculum  
       name: CURRICULUM
