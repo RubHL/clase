@@ -8,9 +8,46 @@
     <language>es-es</language>
     <managingEditor>contact@example.org (Acme Corporation)</managingEditor>
     <webMaster>contact@example.org (Acme Corporation)</webMaster>
+    <lastBuildDate>Wed, 21 Sep 2022 06:55:19 +0200</lastBuildDate>
     
         <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+<title>Contacto</title>
+<link>https://example.org/contacto/</link>
+<pubDate>Thu, 22 Sep 2022 13:04:32 +0200</pubDate>
+      <author>contact@example.org (Acme Corporation)</author>
+      <guid>https://example.org/contacto/</guid>
+<description></description>
+<category></category></item>
+    
+    <item>
+<title>About</title>
+<link>https://example.org/about/</link>
+<pubDate>Thu, 22 Sep 2022 12:56:54 +0200</pubDate>
+      <author>contact@example.org (Acme Corporation)</author>
+      <guid>https://example.org/about/</guid>
+<description></description>
+<category></category></item>
+    
+    <item>
+<title>Pirineo</title>
+<link>https://example.org/viajes/pirineo/</link>
+<pubDate>Wed, 21 Sep 2022 06:55:19 +0200</pubDate>
+      <author>contact@example.org (Acme Corporation)</author>
+      <guid>https://example.org/viajes/pirineo/</guid>
+<description></description>
+<category></category></item>
+    
+    <item>
+<title>Curriculum</title>
+<link>https://example.org/curriculum/</link>
+<pubDate>Wed, 21 Sep 2022 06:54:22 +0200</pubDate>
+      <author>contact@example.org (Acme Corporation)</author>
+      <guid>https://example.org/curriculum/</guid>
+<description></description>
+<category></category></item>
     
     <item>
 <title></title>
