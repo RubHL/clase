@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    hr{
+        width: 30%;
+        text-align: left;
+    }
+</style>
+
+<body>
+    
+    <!--Ejercicio 1-->
+
+    <form action="ejemplo.php" method="get">
+
+        <p>Ingrese su nombre: <input type="text" name="nombre"></p>
+
+        <p>Seleccione los lenguajes que conoce: <br>
+        <input type="checkbox" name="opcion1" value="1">Java<br>
+        <input type="checkbox" name="opcion2" value="2">C++<br>
+        <input type="checkbox" name="opcion3" value="3">C<br>
+        <input type="checkbox" name="opcion4" value="4">C#<br>
+        </p>
+
+        <p><input type="submit" value="Enviar"></p>
+
+      <hr><!--Ejercicio 2-->
+
+        <ul>
+         <li>
+           <label for="name">Ingrese su nombre:</label>
+           <input type="text" id="name" name="user_name">
+         </li>
+         <li>
+           <label for="mail">Ingrese su email:</label>
+           <input type="email" id="mail" name="user_mail">
+         </li>
+         <li>
+           <label for="msg">Comentarios:</label><br>
+           <textarea id="msg" name="user_message"></textarea>
+         </li>
+        </ul>
+
+        <p><input type="submit" value="Enviar"></p>
+    
+
+       <hr><!--Ejercicio 3-->
+
+    
+        <p>Ingrese su nombre: <input type="text" name="nombre" size="40"></p>
+        <p>Seleccione el nivel máximo de estudios que tiene: <br>
+          <input type="radio" name="op1" value="1"> Sin estudios <br>
+          <input type="radio" name="op1" value="2"> Primario <br>
+          <input type="radio" name="op1" value="3"> Secundario <br>
+          <input type="radio" name="op1" value="4"> Universitario <br>
+        </p>
+
+        <p><input type="submit" value="Enviar"></p>
+      
+
+        <hr><!--Ejercicio 4-->
+
+        <p>Seleccione uno o varios colores (Presione Crtl para seleccionar varios colores)</p>
+        <select name="menu" size="3">
+            <option value="1">Rojo</option>
+            <option value="2">Verde</option>
+            <option value="3">Azul</option>
+            <option value="4">Amarillo</option>
+        </select>
+
+        <p><input type="submit" value="Enviar"></p>
+
+         <hr><!--Ejercicio 5-->
+         <label for="frutas">Seleccione una fruta o verdura</label>
+        <select name="menu">
+            <option selected>...</option>
+
+            <optgroup label="Frutas">
+            <option value="1">Naranjas</option>
+            <option value="2">Manzanas</option>
+            <option value="3">Frutillas</option>
+            <option value="4">Durazno</option>
+            <option value="5">Ciruela</option>
+            </optgroup>
+
+            <optgroup label="Verduras">
+            <option value="4">Lechuga</option>
+            <option value="5">Acelga</option>
+            <option value="6">Zapallo</option>
+            <option value="4">Papas</option>
+            <option value="5">Batatas</option>
+            <option value="6">Zanahorias</option>
+            <option value="5">Rabanitos</option>
+            <option value="6">Calabaza</option>
+            </optgroup>
+        </select>       
+         
+
+         <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>
