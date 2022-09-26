@@ -1,6 +1,8 @@
 ---
 title: "Contacto"
+subtitulo: aqui va e l sub
 date: 2022-09-22T13:04:32+02:00
+ciudad: Zaragoza
 draft: false
 ---
 
