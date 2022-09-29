@@ -1,14 +1,26 @@
-{{define "main"}}
+{{ define "main" }}
 
+<!--Plantilla del html-->
 
+<ul style="color: rgb(200, 8, 8); border: solid 3px;">
+    {{ range .Site.Menus.main }}
+     <li>
+      {{ .Name }} {{ .URL  }} 
+     </li>
+    {{ end }}
+</ul>
 
-<div class="containter">
-<h1 style="color: red">{{ .Title }}</h1>
-<h3 style="color: blue">{{ .Params.subtitulo }}</h3>
-<hr>
-{{ .Content }}
-<hr>
+<!-------------------------------------------------------------------------------->
+
+<div class="container" style="color: rgb(53, 225, 79); border: solid 3px">
+
+    <h1 class="text-center"><u>{{ .Title }}</u></h1>
+    <h3 style="color:blue"> {{ .Params.subtitulo }}</h3>
+
+    <div style="background-color: rgb(222, 39, 158); text-align: center;">
+        {{ .Content }}
+    </div>
+    
+    <h2>Saludos desde {{ .Params.ciudad }}</h2>
 </div>
-
-
 {{ end }}

@@ -1,25 +1,29 @@
-<!-- <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
-    </body>
-</html> -->
-
 <!DOCTYPE html>
 <html>
-  {{- partial "head.html" . -}}
-  <body>
-  {{- partial "header.html" . -}}
-    <div id = "content">
+
+<!--Plantilla estática en toda la web-->
+
+<head>
+    asdasdasdas
+    {{- partial "head.html" . -}}
+    {{- block "morecss" . }} {{- end }}
+</head>
+
+<body>
+    {{- partial "nav.html" . -}}
+    {{- partial "header.html" . -}}
+        
+    <div id="content">
     {{- block "main" . }}{{- end }}
     </div>
-  {{- partial "footer.html" . -}}
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-  </body>
+    {{- partial "footer.html" . -}}
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    {{- block "morejs" . }} {{- end }}
+
+    {{- partial "variables.html" . -}}
+</body>
+
 </html>

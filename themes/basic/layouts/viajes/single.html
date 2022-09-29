@@ -5,7 +5,60 @@
 <div class="container">
 
   <h1 class="titulo">Esto es un viaje {{ .Title }}</h1>
-  <p>asdfasdasdas</p>
+  <p>single de viajes</p>
   {{ .Content }}
 </div>
+{{ end }}
+
+
+<!----------------------------->
+
+{{ define "title" }}
+<!-- Sobreescribe el valor de  baseof.html -->
+{{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ end }}
+<!---------------------->
+
+{{ define "morecss" }}
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+   integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+   crossorigin=""/>
+
+<style>
+#map { height: 240px; }
+</style>
+{{ end }}
+
+
+{{ define "main" }}
+<div class="container">
+<h1 class="titulo">{{ .Title }}</h1>
+ <div id="map"></div>
+{{ .Content }}
+</div>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+   integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+   crossorigin=""></script>
+ {{ end }}
+
+{{ define "morejs" }}
+<script>
+var map = L.map('map').setView([{{ .Params.lat }}, {{ .Params.lon }}], 13);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([{{ .Params.lat }}, {{ .Params.lon }}
+]).addTo(map)
+    .bindPopup('{{ .Params.mensaje }}');
+
+
+    
+</script>
 {{ end }}

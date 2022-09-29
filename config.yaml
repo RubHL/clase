@@ -17,6 +17,10 @@ author:
 
 menu:
   main: 
+    - identifier: television
+      name: Television
+      url: /television/canales
+      weight: 40 
     - identifier: blogs
       name: blogs
       url: /blogs
