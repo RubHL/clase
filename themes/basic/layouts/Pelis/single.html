@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+<div class="container">
+    <h1 class="titulo">{{ .Title }}</h1>
+    {{ .Content }}
+    <hr>
+
+    <h2>Datos televison</h2>
+
+    <div class="col-md-4">
+        <table class="table"> <!--la clase es de boostrap-->
+            {{ range .Site.Data.datos_pelis }}
+            <tr>
+                <th><a href="https://www.imdb.com/{{ .url }}">Xx_  {{ .titulo }} _xX</a></th>
+            </tr>
+            <tr>
+                <td><img src="{{.img}}" alt="Imagen de {{.titulo}}"></td>
+                <td>{{ .year }}</td>
+                <td>- {{ .ranking }} -</td>
+            </tr> 
+            {{ end }}
+        </table>
+    </div>  
+</div>
+        {{ end }}
+
+

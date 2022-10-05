@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="container">
+    <h1 class="titulo">{{ .Title }}</h1>
+    {{ .Content }}
+
+    {{ $url :=
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vSCtaInFtz0Y7hOP9_tWTvrwn5vMqeKcBk9qWZLIsp4v1rB3GiM178iRHckOn4BC2s9pkW6GfRSqiYK/pub?output=csv"
+    }}
+    {{ $sep := "," }}
+
+    {{ range $i, $r := getCSV $sep $url }}
+    {{ $ciudad := index $r 2}}
+    {{ $tipo := index $r 6 }}
+    {{ $buscado := "Instituto de Educación Secundaria (IES)"}}
+        {{ if and (eq $ciudad "Zaragoza") (eq $tipo $buscado)}}
+        {{ index $r 5 }} ({{ index $r 2 }})<br>
+        {{ end }}
+    {{ end }}
+
+{{ end }}

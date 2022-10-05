@@ -1,26 +1,4 @@
 
-
-
-{{ define "main" }}
-<div class="container">
-
-  <h1 class="titulo">Esto es un viaje {{ .Title }}</h1>
-  <p>single de viajes</p>
-  {{ .Content }}
-</div>
-{{ end }}
-
-
-<!----------------------------->
-
-{{ define "title" }}
-<!-- Sobreescribe el valor de  baseof.html -->
-{{ .Title }} &ndash; {{ .Site.Title }}
-{{ end }}
-{{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ .Content }}
-{{ end }}
 <!---------------------->
 
 {{ define "morecss" }}
@@ -54,7 +32,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-L.marker([{{ .Params.lat }}, {{ .Params.lon }}
+L.marker([{{ .Params.lat }} , {{ .Params.lon }}
 ]).addTo(map)
     .bindPopup('{{ .Params.mensaje }}');
 

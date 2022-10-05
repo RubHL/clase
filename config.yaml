@@ -17,6 +17,10 @@ author:
 
 menu:
   main: 
+    - identifier: Peliculas
+      name: Peliculas 🎦 
+      url: /Pelis/peliculas
+      weight: 40 
     - identifier: television
       name: Television
       url: /television/canales
